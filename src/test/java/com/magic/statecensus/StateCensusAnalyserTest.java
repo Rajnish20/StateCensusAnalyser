@@ -3,9 +3,6 @@ package com.magic.statecensus;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.nio.file.NoSuchFileException;
-import java.sql.SQLOutput;
-
 
 public class StateCensusAnalyserTest {
 
@@ -26,6 +23,18 @@ public class StateCensusAnalyserTest {
         } catch (StateCensusException e) {
             System.out.println(e.getMessage());
             Assertions.assertEquals(StateCensusException.ExceptionType.Wrong_File, e.type);
+        }
+    }
+
+    @Test
+    public void givenPath_ButWithWrongFileExtension_ShouldReturn_WrongExtensionExceptionType() {
+        String path = "c:\\Users\\rajni\\Desktop\\StateCensusData.txt";
+        StateCensusAnalyser stateCensusAnalyser = new StateCensusAnalyser();
+        try {
+            int entries = stateCensusAnalyser.loadStateCensusData(path);
+        } catch (StateCensusException e) {
+            System.out.println(e.getMessage());
+            Assertions.assertEquals(StateCensusException.ExceptionType.Wrong_Extension, e.type);
         }
     }
 }

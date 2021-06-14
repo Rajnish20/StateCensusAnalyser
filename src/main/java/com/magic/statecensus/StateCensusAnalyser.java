@@ -25,6 +25,8 @@ public class StateCensusAnalyser {
                 csvStateCensusIterator.next();
             }
         } catch (IOException e) {
+            if(!(path.contains(".csv")))
+                throw new StateCensusException(StateCensusException.ExceptionType.Wrong_Extension,"Wrong Extension");
             throw new StateCensusException(StateCensusException.ExceptionType.Wrong_File, "Wrong Path Given");
         }
         return numOfEntries;
