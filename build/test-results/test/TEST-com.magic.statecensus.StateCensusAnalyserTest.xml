@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.magic.statecensus.StateCensusAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-14T08:34:21" hostname="DESKTOP-38KI29F" time="0.215">
+<testsuite name="com.magic.statecensus.StateCensusAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-14T09:19:54" hostname="DESKTOP-38KI29F" time="0.501">
   <properties/>
-  <testcase name="givenPath_WhenCorrectShouldReturnNumOfEntriesAs29()" classname="com.magic.statecensus.StateCensusAnalyserTest" time="0.215"/>
+  <testcase name="givenPath_WhenWrong_ShouldReturn_WrongFileExceptionType()" classname="com.magic.statecensus.StateCensusAnalyserTest" time="0.501"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
