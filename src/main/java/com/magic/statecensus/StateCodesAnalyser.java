@@ -9,19 +9,19 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Iterator;
 
-public class StateCensusAnalyser {
+public class StateCodesAnalyser {
     public static int numOfEntries = 0;
 
-    public int loadStateCensusData(String path) throws StateCensusException {
+    public int loadStateCodeData(String path) throws StateCensusException {
         try {
             Reader reader = Files.newBufferedReader(Paths.get(path));
-            CsvToBean<CSVStateCensus> csvToBean = new CsvToBeanBuilder<CSVStateCensus>(reader).
-                    withType(CSVStateCensus.class).withIgnoreLeadingWhiteSpace(true)
+            CsvToBean<CSVStateCodes> csvToBean = new CsvToBeanBuilder<CSVStateCodes>(reader).
+                    withType(CSVStateCodes.class).withIgnoreLeadingWhiteSpace(true)
                     .build();
-            Iterator<CSVStateCensus> csvStateCensusIterator = csvToBean.iterator();
-            while (csvStateCensusIterator.hasNext()) {
+            Iterator<CSVStateCodes> csvStateCodesIterator = csvToBean.iterator();
+            while (csvStateCodesIterator.hasNext()) {
                 numOfEntries++;
-                csvStateCensusIterator.next();
+                csvStateCodesIterator.next();
             }
         } catch (IOException e) {
             if (!(path.contains(".csv")))

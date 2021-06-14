@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.magic.statecensus.StateCensusAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-14T17:11:35" hostname="DESKTOP-38KI29F" time="0.12">
+<testsuite name="com.magic.statecensus.StateCensusAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-14T17:52:00" hostname="DESKTOP-38KI29F" time="0.077">
   <properties/>
-  <testcase name="givenPath_ButWrongDelimitedFile_ShouldReturn_WrongDelimiterExceptionType()" classname="com.magic.statecensus.StateCensusAnalyserTest" time="0.12"/>
+  <testcase name="givenPathForStateCode_ButWithWrongHeader_ShouldReturn_WrongHeaderExceptionType()" classname="com.magic.statecensus.StateCensusAnalyserTest" time="0.077"/>
   <system-out><![CDATA[Wrong Delimited File or Wrong Header File
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>

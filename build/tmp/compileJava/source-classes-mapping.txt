@@ -3,5 +3,9 @@ com/magic/statecensus/StateCensusException.java
  com.magic.statecensus.StateCensusException$ExceptionType
 com/magic/statecensus/CSVStateCensus.java
  com.magic.statecensus.CSVStateCensus
+com/magic/statecensus/CSVStateCodes.java
+ com.magic.statecensus.CSVStateCodes
 com/magic/statecensus/StateCensusAnalyser.java
  com.magic.statecensus.StateCensusAnalyser
+com/magic/statecensus/StateCodesAnalyser.java
+ com.magic.statecensus.StateCodesAnalyser
