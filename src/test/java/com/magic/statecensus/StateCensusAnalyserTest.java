@@ -19,7 +19,7 @@ public class StateCensusAnalyserTest {
 
     @Test
     public void givenPath_WhenWrong_ShouldReturn_WrongFileExceptionType() {
-        String path = "c:\\Users\\rajni\\Desktop\\StateCensus.csv";
+        String path = "c:\\Users\\rajni\\Documents\\StateCensusData.csv";
         StateCensusAnalyser stateCensusAnalyser = new StateCensusAnalyser();
         try {
             int entries = stateCensusAnalyser.loadStateCensusData(path);
@@ -28,6 +28,4 @@ public class StateCensusAnalyserTest {
             Assertions.assertEquals(StateCensusException.ExceptionType.Wrong_File, e.type);
         }
     }
-
-
 }

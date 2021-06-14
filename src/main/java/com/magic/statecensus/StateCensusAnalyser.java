@@ -24,19 +24,9 @@ public class StateCensusAnalyser {
                 numOfEntries++;
                 csvStateCensusIterator.next();
             }
-        } catch (NoSuchFileException e) {
-            throw new StateCensusException(StateCensusException.ExceptionType.Wrong_File, "Wrong path given");
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new StateCensusException(StateCensusException.ExceptionType.Wrong_File, "Wrong Path Given");
         }
         return numOfEntries;
     }
-
-    public static void main(String[] args) throws StateCensusException {
-        StateCensusAnalyser stateCensusAnalyser = new StateCensusAnalyser();
-        int entries = stateCensusAnalyser.loadStateCensusData("C:\\Users\\rajni\\Desktop\\StateCensus.csv");
-
-
-    }
-
 }
