@@ -1,0 +1,2 @@
+com/magic/statecensus/StateCensusAnalyserTest.java
+ com.magic.statecensus.StateCensusAnalyserTest
