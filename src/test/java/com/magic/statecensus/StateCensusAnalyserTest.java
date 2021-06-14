@@ -37,4 +37,16 @@ public class StateCensusAnalyserTest {
             Assertions.assertEquals(StateCensusException.ExceptionType.Wrong_Extension, e.type);
         }
     }
+
+    @Test
+    public void givenPath_ButWrongDelimitedFile_ShouldReturn_WrongDelimiterExceptionType() {
+        String path = "c:\\Users\\rajni\\Desktop\\Sample-SemicolonDelimited.xlsx";
+        StateCensusAnalyser stateCensusAnalyser = new StateCensusAnalyser();
+        try {
+            int entries = stateCensusAnalyser.loadStateCensusData(path);
+        } catch (StateCensusException e) {
+            System.out.println(e.getMessage());
+            Assertions.assertEquals(StateCensusException.ExceptionType.Wrong_Delimiter, e.type);
+        }
+    }
 }
