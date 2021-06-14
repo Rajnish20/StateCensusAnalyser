@@ -40,13 +40,25 @@ public class StateCensusAnalyserTest {
 
     @Test
     public void givenPath_ButWrongDelimitedFile_ShouldReturn_WrongDelimiterExceptionType() {
-        String path = "c:\\Users\\rajni\\Desktop\\Sample-SemicolonDelimited.xlsx";
+        String path = "c:\\Users\\rajni\\Desktop\\Sample-SemicolonDelimited.csv";
         StateCensusAnalyser stateCensusAnalyser = new StateCensusAnalyser();
         try {
             int entries = stateCensusAnalyser.loadStateCensusData(path);
         } catch (StateCensusException e) {
             System.out.println(e.getMessage());
-            Assertions.assertEquals(StateCensusException.ExceptionType.Wrong_Delimiter, e.type);
+            Assertions.assertEquals(StateCensusException.ExceptionType.Wrong_Delimiter_Or_Wrong_Header, e.type);
+        }
+    }
+
+    @Test
+    public void givenPath_ButWithWrongHeader_ShouldReturn_WrongHeaderExceptionType() {
+        String path = "c:\\Users\\rajni\\Desktop\\StateCensusDataWithWrongHeader.csv";
+        StateCensusAnalyser stateCensusAnalyser = new StateCensusAnalyser();
+        try {
+            int entries = stateCensusAnalyser.loadStateCensusData(path);
+        } catch (StateCensusException e) {
+            System.out.println(e.getMessage());
+            Assertions.assertEquals(StateCensusException.ExceptionType.Wrong_Delimiter_Or_Wrong_Header, e.type);
         }
     }
 }

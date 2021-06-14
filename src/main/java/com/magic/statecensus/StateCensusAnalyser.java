@@ -2,6 +2,7 @@ package com.magic.statecensus;
 
 import com.opencsv.bean.CsvToBean;
 import com.opencsv.bean.CsvToBeanBuilder;
+import com.opencsv.exceptions.CsvRequiredFieldEmptyException;
 
 import java.io.IOException;
 import java.io.Reader;
@@ -29,9 +30,10 @@ public class StateCensusAnalyser {
                 throw new StateCensusException(StateCensusException.ExceptionType.Wrong_Extension, "Wrong Extension");
             throw new StateCensusException(StateCensusException.ExceptionType.Wrong_File, "Wrong Path Given");
         }
+
         catch (RuntimeException e)
         {
-            throw new StateCensusException(StateCensusException.ExceptionType.Wrong_Delimiter,"Wrong Delimited File");
+            throw new StateCensusException(StateCensusException.ExceptionType.Wrong_Delimiter_Or_Wrong_Header,"Wrong Delimited File or Wrong Header File");
         }
         return numOfEntries;
     }
