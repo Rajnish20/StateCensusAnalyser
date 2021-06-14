@@ -1,0 +1,4 @@
+com/magic/statecensus/CSVStateCensus.java
+ com.magic.statecensus.CSVStateCensus
+com/magic/statecensus/StateCensusAnalyser.java
+ com.magic.statecensus.StateCensusAnalyser
